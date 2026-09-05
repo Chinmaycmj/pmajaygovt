@@ -34,9 +34,19 @@ jobs:
       - name: Sync Capacitor Android
         run: npx cap sync android
 
-      - name: Setup Gradle Wrapper
-        working-directory: ./android
-        run: gradle wrapper --gradle-version 8.2.1
+      - name: Create Gradle Wrapper Directory & Properties
+        run: |
+          mkdir -p android/gradle/wrapper
+          cat << 'EOF' > android/gradle/wrapper/gradle-wrapper.properties
+          distributionBase=GRADLE_USER_HOME
+          distributionPath=wrapper/dists
+          distributionUrl=https\://services.gradle.org/distributions/gradle-8.2.1-bin.zip
+          networkTimeout=10000
+          validateDistributionUrl=true
+          zipStoreBase=GRADLE_USER_HOME
+          zipStorePath=wrapper/dists
+          EOF
+          curl -sLo android/gradle/wrapper/gradle-wrapper.jar https://raw.githubusercontent.com/gradle/gradle/v8.2.1/gradle/wrapper/gradle-wrapper.jar
 
       - name: Make Gradle Wrapper Executable
         run: chmod +x android/gradlew
