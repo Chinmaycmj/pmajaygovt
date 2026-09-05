@@ -25,8 +25,11 @@ jobs:
           node-version: 22
           cache: 'npm'
 
-      - name: Setup Gradle
+      - name: Setup Gradle 8.2.1
         uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.2.1'
+          cache-disabled: true
 
       - name: Install dependencies
         run: npm install
@@ -37,7 +40,7 @@ jobs:
       - name: Sync Capacitor Android
         run: npx cap sync android
 
-      - name: Build Debug APK with System Gradle
+      - name: Build Debug APK
         working-directory: ./android
         run: gradle assembleDebug --stacktrace
 
