@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="maskBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090A12"/>
+      <stop offset="100%" stop-color="#141829"/>
+    </linearGradient>
+    <linearGradient id="maskGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Solid background for Android circular cropping -->
+  <rect width="512" height="512" fill="url(#maskBg)"/>
+
+  <!-- Content kept strictly within inner 70% safe zone (center 360px) -->
+  <g transform="translate(0, 0)">
+    <circle cx="256" cy="240" r="120" fill="#141829" stroke="url(#maskGold)" stroke-width="8"/>
+    <rect x="236" y="190" width="40" height="70" rx="20" fill="url(#maskGold)"/>
+    <path d="M 216 220 C 216 276 296 276 296 220" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+    <line x1="256" y1="276" x2="256" y2="306" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+    <line x1="230" y1="306" x2="282" y2="306" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+    <text x="256" y="375" fill="#FDE68A" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="900" text-anchor="middle">VANI SAHAYAK</text>
+  </g>
+</svg>

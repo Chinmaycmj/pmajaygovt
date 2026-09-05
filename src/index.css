@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+/* Warm Ambient & Visual Depth Theme for PM-AJAY Voice Portal */
+
+/* Ambient Radial Glows */
+.voice-glow {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, transparent 70%);
+}
+
+.voice-glow-emerald {
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.35) 0%, transparent 70%);
+}
+
+.voice-glow-amber {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.4) 0%, transparent 70%);
+}
+
+.voice-glow-warm {
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.25) 0%, rgba(30, 58, 138, 0.15) 50%, transparent 75%);
+}
+
+/* Warm Glassmorphism Surfaces */
+.glass-card-warm {
+  background: linear-gradient(135deg, rgba(28, 28, 35, 0.85) 0%, rgba(18, 18, 24, 0.92) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.5),
+              0 4px 12px -2px rgba(0, 0, 0, 0.4),
+              inset 0 1px 1px rgba(255, 255, 255, 0.12);
+}
+
+.glass-card-gold {
+  background: linear-gradient(135deg, rgba(38, 30, 18, 0.85) 0%, rgba(24, 20, 15, 0.92) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  box-shadow: 0 16px 36px -6px rgba(245, 158, 11, 0.15),
+              0 4px 12px rgba(0, 0, 0, 0.5),
+              inset 0 1px 1px rgba(251, 191, 36, 0.2);
+}
+
+.glass-card-blue {
+  background: linear-gradient(135deg, rgba(20, 30, 55, 0.85) 0%, rgba(12, 18, 35, 0.92) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  box-shadow: 0 16px 36px -6px rgba(30, 58, 138, 0.3),
+              0 4px 12px rgba(0, 0, 0, 0.5),
+              inset 0 1px 1px rgba(96, 165, 250, 0.2);
+}
+
+/* Layered Warm Shadows */
+.shadow-warm-sm {
+  box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.4),
+              0 1px 4px -1px rgba(0, 0, 0, 0.3),
+              inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.shadow-warm-md {
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.5),
+              0 4px 12px -2px rgba(0, 0, 0, 0.3),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.shadow-warm-lg {
+  box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.6),
+              0 8px 16px -4px rgba(0, 0, 0, 0.4),
+              0 0 20px rgba(245, 158, 11, 0.08),
+              inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+.shadow-neon-amber {
+  box-shadow: 0 10px 30px -5px rgba(245, 158, 11, 0.35),
+              0 0 15px rgba(245, 158, 11, 0.2);
+}
+
+.shadow-neon-blue {
+  box-shadow: 0 10px 30px -5px rgba(59, 130, 246, 0.4),
+              0 0 15px rgba(37, 99, 235, 0.25);
+}
+
+.shadow-neon-emerald {
+  box-shadow: 0 10px 30px -5px rgba(16, 185, 129, 0.35),
+              0 0 15px rgba(16, 185, 129, 0.2);
+}
+
+/* Animated Shimmer for CTA Buttons */
+@keyframes shimmerSweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+.shimmer-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 100%
+  );
+  animation: shimmerSweep 3.5s infinite ease-in-out;
+  pointer-events: none;
+}
+
+/* Gentle Organic Breathing Wave */
+@keyframes voiceBreath {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.9;
+  }
+}
+
+.animate-voice-breath {
+  animation: voiceBreath 2.8s infinite ease-in-out;
+}
+
+/* Golden badge shine */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 50%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Ground / Canvas High-Tech Grid & Cyber Mesh */
+.ground-matrix {
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.08) 0%, transparent 60%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 32px 32px, 32px 32px;
+}
+
+.ground-circuit-dot {
+  background-image: radial-gradient(rgba(245, 158, 11, 0.18) 1px, transparent 1px);
+  background-size: 24px 24px;
+}

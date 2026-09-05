@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="gov.pmajay.voiceassistant">
+
+    <!-- Audio & Network Permissions -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
+    <!-- Dial toll-free IVR helpline -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- 
+      CRITICAL FOR ANDROID 11+ (API 30+):
+      Package Visibility queries for Google Speech Recognition and TextToSpeech services
+    -->
+    <queries>
+        <!-- Speech-to-Text Recognition Service Intent -->
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
+        
+        <!-- Text-to-Speech Engine Service Intent -->
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+
+        <!-- Explicit Google TTS Engine package querying -->
+        <package android:name="com.google.android.tts" />
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="PM-AJAY Assistant"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Material3.DayNight.NoActionBar">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Material3.DayNight.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

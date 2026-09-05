@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <linearGradient id="bgGrad192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0D18"/>
+      <stop offset="100%" stop-color="#1F1508"/>
+    </linearGradient>
+    <linearGradient id="goldGrad192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="192" height="192" rx="42" fill="url(#bgGrad192)"/>
+  <rect width="186" height="186" x="3" y="3" rx="39" fill="none" stroke="url(#goldGrad192)" stroke-width="3" opacity="0.7"/>
+
+  <!-- Center Circle -->
+  <circle cx="96" cy="86" r="48" fill="#141829" stroke="url(#goldGrad192)" stroke-width="4"/>
+  
+  <!-- Microphone -->
+  <rect x="86" y="68" width="20" height="34" rx="10" fill="url(#goldGrad192)"/>
+  <path d="M 76 84 C 76 108 116 108 116 84" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  <line x1="96" y1="108" x2="96" y2="120" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  <line x1="84" y1="120" x2="108" y2="120" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Text -->
+  <text x="96" y="160" fill="#FDE68A" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" text-anchor="middle">VANI SAHAYAK</text>
+</svg>

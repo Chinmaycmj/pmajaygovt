@@ -1,0 +1,10 @@
+{
+  "name": "Remix PM-AJAY Livelihood Voice Assistant",
+  "description": "Accessible, voice-first Android \u0026 web prototype for PM-AJAY beneficiaries with half-duplex speech recognition and Kannada, Hindi, and English support.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
